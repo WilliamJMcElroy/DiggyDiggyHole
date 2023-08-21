@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>Diggy Diggy Hole</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan:ital@1&family=Black+Han+Sans&family=Tilt+Prism&display=swap"
+        crossorigin="anonymous" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- <style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style> -->
+
+<body class=" debug">
+    <header class="container py-2">
+        <section class="row">
+
+            <h1 class=" col-12 bevan justify-content-center pb-1 m-0">Diggy Diggy Hole</h1>
+        </section>
+    </header>
+
+    <main class="container">
+        <section class="row justify-content-center pt-1">
+
+            <div class="col-4 justify-content-center align-content-center object-fit-contain px-0 py-4">
+                <img class="earth justify-content-center img-fluid" onclick="mine(), clickEarth()" draggable="false"
+                    src="https://th.bing.com/th/id/R.3164a434d10b926f5c399eda3ef651b5?rik=SHQ29tSqoQaM3Q&riu=http%3a%2f%2f25.media.tumblr.com%2fd2c82d24100574c36939bec10c0482c3%2ftumblr_mlnmayG87L1qzl9pho1_400.gif&ehk=ZXQqLHxAONyuugjSomtKPNY2%2fL0RLOSTnV1L%2bdEnCJM%3d&risl=&pid=ImgRaw&r=0"
+                    alt="EARTH">
+            </div>
+            <section class="row py-2 d-flex justify-content-around displayedValues">
+                <h4 class="col-12 col-md-4 text-white-50 pt-3 opacity-100"> Click Value: <span id="clickValue">1</span>
+                </h4>
+                <h4 class="col-12 col-md-4 text-white-50 pt-3 justify-content-end opacity-100"> Auto Value: <span
+                        id="autoValue">0</span>
+                </h4>
+                <h4 class="text-white-50 pt-3 ps-5">
+                    Buy:
+                </h4>
+
+                <div class="col-4 pb-5">
+                    <button onclick="buyMiner()" class="fs-10 fw-semibold">Miner | <span id="minerPrice">10</span>
+                        |</button>
+                    <button onclick="buyOcto()" class="fs-10 fw-semibold">OctoMiner | <span id="octoPrice">100</span>
+                        |</button>
+                </div>
+                <div class="col-4 pb-5 justify-content-end">
+                    <button onclick="buyCart()" class="fs-10 fw-semibold justify-content-around">Cart | <span
+                            id="cartPrice">600</span>
+                        |</button>
+                    <button onclick="buyOctoTeam()" class="fs-10 fw-semibold justify-content-around">Octo-Team | <span
+                            id="octoTeamPrice">3000</span> </button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="container align-content-end justify-content-center text-white-50 infobox">
+        <section class="row infostats border-white align-content-center">
+            <div class="col-12 col-md-4 fs-10 borderCustom justify-content-start"> 💰 Gold: | <span id="gold">0</span> |
+            </div>
+            <div class="col-12 col-md-4 fs-10 justify-content-end">
+                <div class="timer">
+                    <span>Auto Countdown :</span>
+                    <span id="timer-seconds">3</span>
+                </div>
+            </div>
+            <section class="row pt-2 align-content-center justify-content-center">
+                <div class="col-12 col-md-3 fs-10 border-end"> Standard
+                    Upgrades
+
+                    <div class="fs-10"> ⛏ Miners: | <span id="minerCount">0</span> |</div>
+                    <div class="fs-10"> 🐙⛏ Octominers: | <span id="octoMinerCount">0</span> | </div>
+                </div>
+                <div class="col-12 col-md-3 align-content-center fs-10 border-end"> Automatic Upgrades
+                    <div class="fs-10"> 🚂 Carts: | <span id="cartCount">0</span> |</div>
+                    <div class="fs-10"> 🐙🦑 Octo-Team: | <span id="teamCount">0</span> |</div>
+                </div>
+                <div class="col-12 col-md-3 align-content-center fs-10"> Upgrade Multipliers
+                    <div class="fs-10">Miner: 1</div>
+                    <div class="fs-10">Octominer: 8</div>
+                    <div class="fs-10">Cart: 20</div>
+                    <div class="fs-10">Octo-Team: 80</div>
+                </div>
+            </section>
+
+        </section>
+        </div>
+
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

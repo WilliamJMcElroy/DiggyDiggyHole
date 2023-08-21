@@ -1,0 +1,62 @@
+:root {
+    --pink-words: rgb(134, 81, 131);
+}
+
+body {
+    background-image: url("https://wallpaperbat.com/img/455544-a-pixel-art-i-made-for-the-latest-snapshot-minecraft.png");
+    /* height: 100%;
+    width: max-content; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+
+footer {
+    font-size: 40px;
+    font-style: italic;
+    color: var(--pink-words);
+}
+
+.bevan {
+    font-family: 'Bevan', cursive;
+}
+
+h1 {
+    font-size: 35px;
+    color: var(--pink-words);
+}
+
+.earth {
+    height: 35vh;
+    width: 35vh;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.infostats {
+    color: rgb(255, 244, 244);
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+}
+
+.infobox {
+    background-color: rgb(51, 49, 49);
+    width: fit-content;
+    opacity: .75;
+}
+
+.borderCustom {
+    border: 3px;
+    border-color: white;
+}
+
+.timer {
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.displayedValues {
+    opacity: 1 !important;
+}
